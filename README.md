@@ -1,7 +1,7 @@
 # **Finding Lane Lines on the Road**
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
+<img src="test_images_output/whiteCarLaneSwitch.jpg" width="480" alt="Combined Image" />
 
 Overview
 ---
@@ -15,7 +15,7 @@ You will find a notebook `P1.ipynb` containing the pipeline to apply to be able 
 - Shortcomings of this pipeline
 - Potential improvements for this pipeline
 
-You will also find the results of our algorithms in the `/test_images_output` folder. The pictures in `/assets` are only here to document the `P1_writeup.md` file. 
+You will also find the results of our algorithms in the `/test_images_output` folder. The pictures in `/assets` are only here to document the `P1_writeup.md` file.
 
 Set-up
 ---

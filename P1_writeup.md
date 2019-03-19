@@ -28,14 +28,12 @@ My pipeline consisted of 5 steps.
 - Gaussian smoothing with kernel size = 3
 
 - Canny edge detector to detect strong variations in color
-[canny]: assets/canny.jpg
-![alt text][canny]
+![alt text](assets/canny.jpg)
 
 - Region of interest selection to focus on probable lanes
 
 - Hough lines transform to detect lines
-![alt text][houghlines]
-[houghlines]: ./assets/houghlines.jpg
+![alt text](assets/houghlines.jpg)
 
 In order to be able to show a single line on the left and right lanes, I modified the draw_lines() function by averaging the slope of the lanes detected.
 Concretely, I first divided all detected lines into left (negative slope) and right lane (positive slope) and computed the average slope on each lane. From there, I computed the appropriate coordinates to display the lane from the bottom of the image to the top of our region of interest. In addition, I filtered slopes coefficient in an attempt to reduce outliers.
@@ -47,8 +45,7 @@ Overall, the method we implemented works well in simple cases when the images ar
 
 - The first issue is the one demonstrated in the challenge video : area of interest is hardcoded, and this is a problem as soon as we change the resolution of the camera and that the coordinates change.
 
-![alt text][hardcodedregion]
-[hardcodedregion]: ./assets/hardcodedregion.jpg
+![alt text](assets/hardcodedregion.jpg)
 
 
 - Moreover, region of interest is hardcoded and especially fitted to straight lines. Thus, the same algorithm on a mountain road would likely not work.
@@ -61,8 +58,8 @@ Overall, the method we implemented works well in simple cases when the images ar
 ### 3. Suggest possible improvements to your pipeline
 
 - Fix region : a quick hack I implemented in the notebook regarding the resolution of the image problem was to change from pure hard thresholding to image ratio thresholding. For instance, we keep the 90% in the middle of the image at the bottom, and form a pyramid that is a bit flatten at the top...
-![alt text][fixhardcodedregion]
-[fixhardcodedregion]: ./assets/fixhardcodedregion.jpg
+
+![alt text](assets/fixhardcodedregion.jpg)
 This trick solved most of the problem in the challenge video, although problem number 2 is still here (see below).
 
 

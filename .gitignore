@@ -3,5 +3,5 @@ test_videos/
 examples/
 set_git.sh
 LICENSE
-ipynb_checkpoints/
+.ipynb_checkpoints/
 

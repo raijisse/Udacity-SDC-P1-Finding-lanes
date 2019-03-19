@@ -22,17 +22,20 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of 5 steps.
-- Grayscale conversion.
+- Grayscale conversion
+
 ![alt text](assets/grayscale.jpg)
 
 - Gaussian smoothing with kernel size = 3
 
 - Canny edge detector to detect strong variations in color
+
 ![alt text](assets/canny.jpg)
 
 - Region of interest selection to focus on probable lanes
 
 - Hough lines transform to detect lines
+
 ![alt text](assets/houghlines.jpg)
 
 In order to be able to show a single line on the left and right lanes, I modified the draw_lines() function by averaging the slope of the lanes detected.
@@ -60,6 +63,7 @@ Overall, the method we implemented works well in simple cases when the images ar
 - Fix region : a quick hack I implemented in the notebook regarding the resolution of the image problem was to change from pure hard thresholding to image ratio thresholding. For instance, we keep the 90% in the middle of the image at the bottom, and form a pyramid that is a bit flatten at the top...
 
 ![alt text](assets/fixhardcodedregion.jpg)
+
 This trick solved most of the problem in the challenge video, although problem number 2 is still here (see below).
 
 

@@ -23,13 +23,12 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps.
 - Grayscale conversion.
-[grayscale]: ./assets/grayscale.jpg
-![alt text][grayscale]
+![alt text](assets/grayscale.jpg)
 
 - Gaussian smoothing with kernel size = 3
 
 - Canny edge detector to detect strong variations in color
-[canny]: ./assets/canny.jpg
+[canny]: assets/canny.jpg
 ![alt text][canny]
 
 - Region of interest selection to focus on probable lanes
